@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+#define int     int64_t
+#define pb       push_back
+#define endl    '\n'
+#define pll     pair<int,int>
+#define vll     vector<int>
+#define all(a)  (a).begin,(a).end()
+#define x       first
+#define y       second
+#define sz(x)    (int)x.size()
+#define lbnd     lower_bound
+#define ubnd     upper_bound
+#define bs       binary_search
+#define mi       map<int,int>
+#define rep(i,a,b)   for(int i=a;i<b;i++)
+using namespace std;
+void solve(){
+  int k;
+  cin>>k;
+  int h=sqrt(k);
+  int b=h+1;
+  if((h*h)==k){
+    cout<<h<<" "<<1<<endl;
+  }
+  else if((k>=((b*b)-b+1)) && (k<(b*b))){
+      cout<<b<<" "<<((b*b)-k+1)<<endl;
+  }
+  else{
+    int c=sqrt(k)+1;
+    int l=sqrt(k);
+    int b=(k-(l*l));
+    cout<<b<<" "<<c<<endl;
+    }
+  }
+signed main()
+{
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+  #ifndef ONLINE_JUDGE
+    freopen("input.txt","r",stdin);
+    freopen("output.txt","w",stdout);
+  #endif
+    int t;
+    cin>>t;
+    while(t--){
+      solve();   
+    }
+  return 0;
+}
